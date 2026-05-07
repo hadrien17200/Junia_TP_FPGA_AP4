@@ -3,12 +3,11 @@ use ieee.std_logic_1164.all;
 
 -- Toplevel : Registre universel 8 bits sur carte FPGA
 
--- Description :
 entity toplevel is
     port (
-        SW   : in  std_logic_vector(9 downto 0);  
-        KEY  : in  std_logic_vector(3 downto 0);  
-        LEDG : out std_logic_vector(7 downto 0)   
+        SW   : in  std_logic_vector(9 downto 0);
+        KEY  : in  std_logic_vector(3 downto 0);
+        LEDG : out std_logic_vector(7 downto 0)
     );
 end entity toplevel;
 

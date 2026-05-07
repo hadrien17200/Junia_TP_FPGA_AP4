@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
--- Description : 
+
 entity toplevel is
     port (
         CLOCK_50_B6A : in  std_logic;

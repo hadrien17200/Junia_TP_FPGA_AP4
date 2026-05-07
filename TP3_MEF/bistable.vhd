@@ -56,11 +56,8 @@ architecture behavioral of bistable is
 
 begin
 
-    -- -------------------------------------------------------
     -- Process 1 : Registre d'etats (SEQUENTIEL)
-    -- Memorise l'etat courant sur chaque front montant de CLK
-    -- RST actif bas => retour a l'etat A
-    -- -------------------------------------------------------
+
     process(CLK, RST)
     begin
         if RST = '0' then
@@ -70,10 +67,7 @@ begin
         end if;
     end process;
 
-    -- -------------------------------------------------------
     -- Process 2 : Calcul de l'etat futur (COMBINATOIRE)
-    -- Depend de current_state et de l'entree X
-    -- -------------------------------------------------------
     process(current_state, X)
     begin
         case current_state is
@@ -98,10 +92,8 @@ begin
         end case;
     end process;
 
-    -- -------------------------------------------------------
     -- Process 3 : Calcul des sorties (COMBINATOIRE)
-    -- Machine de Moore : sorties ne dependent que de l'etat
-    -- -------------------------------------------------------
+
     process(current_state)
     begin
         case current_state is
